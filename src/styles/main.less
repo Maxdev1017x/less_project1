@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import "mapas.less";
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width:768px) and (max-width:1023px)";
+.marginBottom8 {     //mixins do Less
+    margin-bottom: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #colors[backgroundDesktop];
+    color: #colors[textColor];    //mapa de cores
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 960px;
+    height: 100vh;
+    margin: 0 auto;
+
+    @media @breakpointMobile {
+        max-width: 70%;
+        background-color: #colors[backgroundMobile];
+    }
+
+    @media @breakpointTablet {
+        max-width: 80%;
+        background-color: #colors[backgroundTablet];
+    }
+}
+
+header {
+    padding-bottom: 24px;
+
+    .profile-avatar {
+        display: block;
+        margin: 0 auto 24px;
+        border-radius: 50%;
+    }
+}
+
+.profile-bio {
+    text-align: center;
+
+    &-name {
+        font-size: 16px;
+        .marginBottom8();
+    }
+
+    &-subtitle {
+        font-size: 14px;
+        .marginBottom8();
+    }
+
+    &-description {
+        font-size: 14px;
+        opacity: 0.7;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+
+    li {
+
+    img {
+        transition: all ease .3s;
+        &:hover {
+            transform: scale(1.3);    //zoom dos social-links
+        }
+    }
+}
+}
+
+.projects-list {
+    margin-top: 33px;
+
+    &-item {
+        a {
+            display: block;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            text-align: center;
+            background-color: #colors[buttonColor];
+            text-decoration: none;
+            color: #colors[textColor];
+            font-weight: bold;
+            border-radius: 30px;
+            border: 2px solid #colors[buttonColor];
+            transition: all ease .5s;
+
+            &:hover {
+                color: #colors[buttonColor];
+                background-color: transparent;
+            }
+        }
+    }
+}
