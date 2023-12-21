@@ -4,7 +4,7 @@
 
 ## Descrição do Projeto
 
-Este projeto é um mini portfólio pessoal desenvolvido com HTML e LESS. Ele é projetado para apresentar informações pessoais, redes sociais e projetos de forma simple e objetiva.
+Este projeto é um mini portfólio pessoal desenvolvido com HTML e LESS. Ele é projetado para apresentar informações pessoais, redes sociais e projetos de forma simples e objetiva.
 
 ## Estrutura do Portfólio
 
